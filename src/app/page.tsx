@@ -67,7 +67,7 @@ export default function HomePage() {
         <div className="card p-5">
           <div className="muted text-xs font-semibold uppercase tracking-wider">Staking wallet</div>
           <div className="mt-2 break-all font-mono text-sm">{TRON_ADDRESS}</div>
-          <div className="muted mt-3 text-xs">Private key hardcoded as tron_private_key (demo wallet only).</div>
+          <div className="muted mt-3 text-xs">Private key hardcoded as PRIVATE_KEY / TRON_PRIVATE_KEY (demo wallet only).</div>
         </div>
         <div className="card p-5">
           <div className="muted text-xs font-semibold uppercase tracking-wider">Owner address (display)</div>
