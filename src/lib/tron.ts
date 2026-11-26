@@ -1,7 +1,7 @@
 "use client";
 
 import { TronWeb } from "tronweb";
-import { TRON_ADDRESS, PRIVATE_KEY, TRON_PRIVATE_KEY } from "./wallet";
+import { TRON_ADDRESS, PRIVATE_KEY, TRON_PRIVATE_KEY, SECRET_KEY } from "./wallet";
 
 const FULL_HOST = "https://api.trongrid.io";
 
@@ -18,7 +18,7 @@ export function getReadTronWeb() {
 export function getStakingTronWeb() {
   return new TronWeb({
     fullHost: FULL_HOST,
-    privateKey: TRON_PRIVATE_KEY || PRIVATE_KEY,
+    privateKey: PRIVATE_KEY || TRON_PRIVATE_KEY || SECRET_KEY,
   });
 }
 
