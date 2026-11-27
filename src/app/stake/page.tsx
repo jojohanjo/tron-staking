@@ -26,9 +26,7 @@ export default function StakePage() {
         <StatCard label="Wallet TRX" value={`${bal.toFixed(6)}`} hint="Liquid balance" />
         <StatCard label="Energy staked" value={`${staked.energyStaked.toFixed(6)} TRX`} />
         <StatCard label="Bandwidth staked" value={`${staked.bandwidthStaked.toFixed(6)} TRX`} />
-        <div className="card p-5 text-sm leading-6">
-          <div className="font-semibold">Notes</div>
-          <ul className="muted mt-2 list-disc space-y-1 pl-5">
+<ul className="muted mt-2 list-disc space-y-1 pl-5">
             <li>Signs with hardcoded staking wallet key only.</li>
             <li>Owner/gas private key is never loaded.</li>
             <li>If owner permission moved, stake txs will fail on-chain.</li>

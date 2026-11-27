@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "TronStake · Demo",
-  description: "Rough Tron staking demo (Stake 2.0)",
+  title: "TronStake",
+  description: "",
 };
 
 export default function RootLayout({

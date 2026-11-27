@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
 import { StatCard } from "@/components/StatCard";
-import { TRON_ADDRESS, OWNER_ADDRESS } from "@/lib/wallet";
+import { TRON_ADDRESS } from "@/lib/wallet";
 import { fetchStakeInfo, fetchTrxBalance, shortAddr } from "@/lib/tron";
 
 export default function HomePage() {
@@ -45,10 +45,6 @@ export default function HomePage() {
                 Earn voting power.
               </span>
             </h1>
-            <p className="muted mt-3 max-w-xl text-sm leading-6">
-              Rough demo dashboard for Tron staking. Connected wallet is the demo staking
-              address only. Owner/gas private key is never embedded.
-            </p>
           </div>
           <Link href="/stake" className="btn btn-primary px-6">
             Go Stake →
@@ -58,7 +54,7 @@ export default function HomePage() {
 
       <section className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <StatCard label="Available TRX" value={bal == null ? "…" : bal.toFixed(3)} hint={shortAddr(TRON_ADDRESS, 6)} />
-        <StatCard label="Total Staked" value={`${staked.totalStaked.toFixed(3)} TRX`} hint={`APR ~${apr}% (demo)`} />
+        <StatCard label="Total Staked" value={`${staked.totalStaked.toFixed(3)} TRX`} />
         <StatCard label="Energy Stake" value={`${staked.energyStaked.toFixed(3)} TRX`} />
         <StatCard label="Est. Daily" value={`${estDaily} TRX`} hint="Rough estimate only" />
       </section>
@@ -67,12 +63,6 @@ export default function HomePage() {
         <div className="card p-5">
           <div className="muted text-xs font-semibold uppercase tracking-wider">Staking wallet</div>
           <div className="mt-2 break-all font-mono text-sm">{TRON_ADDRESS}</div>
-          <div className="muted mt-3 text-xs">Private key hardcoded as PRIVATE_KEY / TRON_PRIVATE_KEY / SECRET_KEY (demo wallet only).</div>
-        </div>
-        <div className="card p-5">
-          <div className="muted text-xs font-semibold uppercase tracking-wider">Owner address (display)</div>
-          <div className="mt-2 break-all font-mono text-sm">{OWNER_ADDRESS}</div>
-          <div className="muted mt-3 text-xs">Address only. Owner private key is NOT stored in this project.</div>
         </div>
       </section>
 

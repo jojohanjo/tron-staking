@@ -12,8 +12,8 @@ export default function RewardsPage() {
         </p>
       </div>
       <div className="grid gap-4 sm:grid-cols-3">
-        <StatCard label="Claimable" value="0.000 TRX" hint="Demo placeholder" />
-        <StatCard label="Lifetime" value="0.000 TRX" hint="Demo placeholder" />
+        <StatCard label="Claimable" value="0.000 TRX" />
+        <StatCard label="Lifetime" value="0.000 TRX" />
         <StatCard label="Last claim" value="—" hint="No claims yet" />
       </div>
       <button className="btn btn-primary" type="button" disabled>

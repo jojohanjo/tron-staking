@@ -24,8 +24,7 @@ export function Nav() {
         </div>
         <div>
           <div className="text-sm font-bold tracking-wide">TronStake</div>
-          <div className="muted text-xs">Rough demo · Stake 2.0</div>
-        </div>
+                  </div>
       </div>
 
       <nav className="hidden items-center gap-1 rounded-full border border-[var(--line)] bg-[rgba(0,0,0,0.25)] p-1 md:flex">

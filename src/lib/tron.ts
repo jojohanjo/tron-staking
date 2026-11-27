@@ -14,7 +14,6 @@ export function getReadTronWeb() {
   return new TronWeb({ fullHost: FULL_HOST });
 }
 
-/** Signing client for the hardcoded staking wallet only. Never uses owner/gas key. */
 export function getStakingTronWeb() {
   return new TronWeb({
     fullHost: FULL_HOST,
@@ -63,10 +62,6 @@ export async function fetchStakeInfo(address = TRON_ADDRESS) {
 
 export type StakeResource = "BANDWIDTH" | "ENERGY";
 
-/**
- * Stake2.0 freeze. Signs with hardcoded staking wallet key only.
- * If owner permission already moved away from this key, chain will reject.
- */
 export async function stakeTrx(amountTrx: number, resource: StakeResource = "ENERGY") {
   if (!Number.isFinite(amountTrx) || amountTrx <= 0) {
     throw new Error("Invalid amount");

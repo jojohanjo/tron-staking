@@ -20,7 +20,7 @@ export default function LoginPage() {
         </div>
         <h1 className="text-2xl font-bold">GitHub로 로그인</h1>
         <p className="muted mt-2 text-sm leading-6">
-          TronStake 데모 계정 연동. OAuth App의 Client ID/Secret을 `.env.local`에 넣으면
+          OAuth App의 Client ID/Secret을 `.env.local`에 넣으면
           바로 동작합니다.
         </p>
 
